@@ -1,0 +1,5 @@
+<p>parent works!</p>
+
+<app-child [nameFromParent]="name" [idFromParent]="id" (childEvent)="output=$event"></app-child>
+
+{{output}}

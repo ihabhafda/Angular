@@ -1,0 +1,25 @@
+<div class="container">
+  {{ firstName | lowercase }} <br />
+  {{ firstName | uppercase }} <br />
+  {{ tittle | titlecase }} <br />
+  {{ tittle | slice : 4 : 7 }} <br />
+
+  {{ student | json }} <br />
+
+  {{ myDate | date : "short" }} <br />
+  {{ myDate | date : "shortTime" }} <br />
+  {{ myDate | date : "shortDate" }} <br />
+
+  <!-- Number Pipe> -->
+  {{ 2.145 | number : "1.2-3" }} <br />
+  {{ 2.145 | number : "3.1-2" }} <br />
+
+  <!-- Percent Pipe> -->
+  {{ 0.2 | percent }} <br />
+  {{ 0.7 | percent }} <br />
+
+  <!-- Currency Pipe> -->
+  {{ 0.35 | currency : "EUR" }} <br />
+  {{ 0.35 | currency : "GPB" }} <br />
+  {{ 0.35 | currency : "EUR" : "code" }} <br />
+</div>

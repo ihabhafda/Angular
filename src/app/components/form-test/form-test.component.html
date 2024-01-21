@@ -1,0 +1,87 @@
+<div class="container">
+  <h3><u>Contact</u></h3>
+  <br />
+  <form autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+    <div class="form-group">
+      <label for="email">E-email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        ngModel
+        [(ngModel)]="login.email"
+        name="email"
+        #email="ngModel"
+        required
+        minlength="8"
+        maxlength="20"
+        pattern="CompanyABC"
+      />
+      <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+        <div *ngIf="email.hasError('required')">Required</div>
+        <div *ngIf="email.hasError('minlength')">Minimum 5 characters</div>
+        <div *ngIf="email.hasError('maxlength')">Maximum 20 characters</div>
+        <div *ngIf="email.hasError('pattern')">Invalid email pattern</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <br />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        ngModel
+        name="password"
+        #password="ngModel"
+        [(ngModel)]="login.password"
+        required
+        minlength="5"
+        maxlength="20"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="password.touched && !password.valid"
+      >
+        <div *ngIf="password.hasError('required')">Password Required</div>
+        <div *ngIf="password.hasError('minlength')">
+          Password must be Minimum 5 characters
+        </div>
+        <div *ngIf="password.hasError('maxlength')">
+          Password must be Maximum 20 characters
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        name="confirmPassword"
+        id="confirmPassword"
+        class="form-control"
+        #confirmPassword="ngModel"
+        [(ngModel)]="confirmPass"
+        pattern="{{ login.password }}"
+        required
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="confirmPassword.touched && !confirmPassword.valid"
+      >
+        <div *ngIf="confirmPassword.hasError('required')">
+          Confirm Password Required
+        </div>
+        <div *ngIf="confirmPassword.hasError('pattern')">
+          Error Password Invalid
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <button class="btn btn-danger" type="submit">Send</button>
+  </form>
+</div>
