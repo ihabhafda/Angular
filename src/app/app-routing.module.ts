@@ -7,6 +7,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ObservableTestComponent } from './components/observable-test/observable-test.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { FormTestComponent } from './components/form-test/form-test.component';
+import { CsvFileComponent } from './components/csv-file/csv-file.component';
 
 const routes: Routes = [
   // { path: "**", component: UserComponent}, // chu makatab bye5do 3ala Page UserComponent
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: "observable", component: ObservableTestComponent},
   { path: "pipe", component: PipeComponent},
   { path: "form", component: FormTestComponent},
+  {path: "csv-file", component: CsvFileComponent},
 ];
 
 @NgModule({

@@ -29,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductsComponent,
     ObservableTestComponent,
     PipeComponent,
-    FormTestComponent
+    FormTestComponent,
   ],
   imports: [
     BrowserModule,

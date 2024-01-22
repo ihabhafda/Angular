@@ -1,0 +1,29 @@
+<b> <p>csv-file works!</p> </b>
+
+<div class="row">
+  <div class="col-md-1 offset-md-8">
+    <i
+      class="fa fa-download"
+      aria-hidden="true"
+      (click)="downloadCcvFile()"
+    ></i>
+  </div>
+</div>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Average</th>
+    <th>Approved</th>
+    <th>Description</th>
+  </tr>
+
+  <tr *ngFor="let item of data">
+    <td>{{ item.name }}</td>
+    <td>{{ item.age }}</td>
+    <td>{{ item.average }}</td>
+    <td>{{ item.approved }}</td>
+    <td>{{ item.description }}</td>
+  </tr>
+</table>

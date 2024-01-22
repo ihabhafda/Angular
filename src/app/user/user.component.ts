@@ -14,7 +14,7 @@ export class UserComponent implements OnInit {
   location = 'lebanon';
   status = 'active';
   Message = "";
-  public ihabList: { id: number; name: string; dob: number; phone: number, comments: any }[] = [];
+  public ihabList: { name: string; dob: number; phone: number, comments: any }[] = [];
 
   tableData: { productName: string; productPrice: number; productQuantity: number; }[]= [];
 
@@ -26,15 +26,17 @@ export class UserComponent implements OnInit {
   this.grtProduct();
   this.getIhab();
   }
-  grtProduct() {
-    this.tableData = this.productService.productTable;
-  }
-
+  
   getIhab() {
     this.userService.getUsers().subscribe(result => {this.ihabList = result;
     console.log(result);
     })
   }
+
+  grtProduct() {
+    this.tableData = this.productService.productTable;
+  }
+
 
   
   getStatus() {
