@@ -16,6 +16,8 @@ import { PipeComponent } from './components/pipe/pipe.component';
 import { FormTestComponent } from './components/form-test/form-test.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { HttpClientModule } from '@angular/common/http';
+import { SendComponent } from './components/behavior/send/send.component';
+import { ReceiveComponent } from './components/behavior/receive/receive.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     ObservableTestComponent,
     PipeComponent,
     FormTestComponent,
+    SendComponent,
+    ReceiveComponent,
   ],
   imports: [
     BrowserModule,
