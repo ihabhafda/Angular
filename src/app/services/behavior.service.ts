@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class BehaviorService {
 
-  mySendName = new BehaviorSubject <string>('');
+  mySendName = new BehaviorSubject <string> ('');
 
   constructor() { }
 
