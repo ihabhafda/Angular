@@ -13,7 +13,7 @@ export class UserComponent implements OnInit {
   name = 'ahmad';
   location = 'lebanon';
   status = 'active';
-  message = "";
+  Message = "";
   public ihabList: { name: string; dob: number; phone: number, comments: any }[] = [];
 
   tableData: { productName: string; productPrice: number; productQuantity: number; }[]= [];
