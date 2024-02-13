@@ -14,7 +14,7 @@ export class PipeComponent {
  // Json Pipe
   public student = {
     "FullName": "ihab hafda",
-    "School": "School Name",
+    "School": "school Name",
   }
 
   // Date Pipe
